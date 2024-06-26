@@ -11,3 +11,79 @@ GeneratedPluginRegistrant.java
 key.properties
 **/*.keystore
 **/*.jks
+
+# Flutter specific
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+
+# IDE/Editor specific
+.vscode/
+.idea/
+*.iml
+
+# Android specific
+android/.gradle/
+android/local.properties
+android/app/build/
+
+# iOS specific
+ios/Pods/
+ios/Flutter/Flutter.xcworkspace/
+ios/Flutter/ephemeral/Flutter.xcworkspace/
+ios/Flutter/App.framework/
+ios/Flutter/Flutter.framework/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/App/Flutter-Prefix.pch
+ios/Flutter/App/GeneratedPluginRegistrant.*
+
+# Firebase specific
+# Firebase configuration files (replace with your specific Firebase configuration files)
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# Exclude Flutter generated code and caches
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+/build/
+
+# Exclude Android build/ and Gradle files
+android/.gradle/
+android/app/build/
+android/app/intermediates/
+android/app/*.iml
+android/local.properties
+
+# Exclude iOS build/ and Pod files
+ios/Pods/
+ios/Flutter/Flutter.xcworkspace/
+ios/Flutter/ephemeral/Flutter.xcworkspace/
+ios/Flutter/App.framework/
+ios/Flutter/Flutter.framework/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/App/Flutter-Prefix.pch
+ios/Flutter/App/GeneratedPluginRegistrant.*
+
+# Exclude Firebase configuration files
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# Exclude macOS build directory
+macos/Flutter/Flutter.xcodeproj/
+macos/Flutter/Flutter/Generated.xcconfig
+
+# Exclude web artifacts
+web/*.js
+web/*.html
+web/*.css
+
+# Miscellaneous
+.DS_Store
+*.log
