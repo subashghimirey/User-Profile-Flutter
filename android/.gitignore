@@ -87,3 +87,5 @@ web/*.css
 # Miscellaneous
 .DS_Store
 *.log
+
+lib/firebase_options.dart
