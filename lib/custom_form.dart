@@ -128,7 +128,7 @@ class _CustomFormState extends State<CustomForm> {
                             activeColor: Colors.white,
                           ),
                           const Text(
-                            "I agree to all Terms, Privacy Policy and fees",
+                            "I agree to all Terms, Privacy Policy",
                             style: TextStyle(fontSize: 16),
                           ),
                         ],
@@ -181,7 +181,12 @@ class _CustomFormState extends State<CustomForm> {
                       : ElevatedButton(
                           onPressed: () async {
                             if (_formKey.currentState!.validate()) {
-                              if (_agreeTerms) {
+                              if (!_agreeTerms) {
+                                setState(() {
+                                  errorMessage =
+                                      "Please agree to privacy policies and terms";
+                                });
+                              } else {
                                 try {
                                   var user =
                                       await auth.registerUsingEmailAndPassword(
@@ -197,16 +202,10 @@ class _CustomFormState extends State<CustomForm> {
                                   }
                                 } catch (e) {
                                   setState(() {
-                                    errorMessage =
-                                        "enter valid credentials to sign up";
+                                    errorMessage = "Email Already Used!!";
                                   });
                                 }
                               }
-                            } else {
-                              setState(() {
-                                errorMessage =
-                                    "Please agree to terms and conditions";
-                              });
                             }
                           },
                           style: ElevatedButton.styleFrom(

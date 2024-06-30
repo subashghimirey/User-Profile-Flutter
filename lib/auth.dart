@@ -15,8 +15,8 @@ class Auth {
 
       user = userCredential.user;
       user!.updateDisplayName(name);
-    } catch (err) {
-      throw Exception(err.toString());
+    } on FirebaseAuthException catch (err) {
+      throw Exception(err);
     }
     return user;
   }
@@ -30,8 +30,8 @@ class Auth {
           email: email, password: password);
 
       user = userCredential.user;
-    } catch (err) {
-      throw Exception(err.toString());
+    } on FirebaseAuthException catch (err) {
+      throw Exception(err);
     }
     return user;
   }

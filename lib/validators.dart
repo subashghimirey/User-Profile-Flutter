@@ -21,7 +21,7 @@ class Validators {
     if (password.isEmpty) {
       return "Password can't be empty";
     } else if (password.length < 6) {
-      return "At least 8 characters long";
+      return "Invalid Password! Please retry";
     }
 
     return null;
